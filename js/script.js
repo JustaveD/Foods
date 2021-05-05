@@ -1,7 +1,8 @@
 const icons = document.querySelectorAll('.section-1-icons i');
 
 let counter = 1;
-setInterval(()=>{
+let time = 4000;
+const addAndRemoveClassChangeToIconSlide = () =>{
     counter++;
 
     let icon = document.querySelector('.change');
@@ -14,5 +15,5 @@ setInterval(()=>{
     else{
         icon.nextElementSibling.classList.add('change');
     }
-
-},1000)
+}
+setInterval(addAndRemoveClassChangeToIconSlide,time);
