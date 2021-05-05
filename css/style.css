@@ -15,3 +15,38 @@ html {
     font-size: 62.5%;
 }
 /* End of Common Styles */
+
+/* Section 1 */
+.section-1{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #333;
+}
+
+.section-heading{
+    font-size: 12rem;
+    color: #fff;
+    font-weight: 900;
+    text-transform: capitalize;
+    letter-spacing: 0.5rem;
+    text-shadow: .3rem .3rem .3rem #000;
+}
+
+.section-1-icons i {
+    font-size: 35rem;
+    color: #a79a2d;
+    position: absolute;
+    transform: translate(-50%,-50%) scale(0);
+    transition: transform .3s ;
+    text-shadow: .2rem .2rem  .2rem#000;
+}
+
+.section-1-icons i.change {
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform .3s .3s ;
+}
+/* End of Section 1 */
