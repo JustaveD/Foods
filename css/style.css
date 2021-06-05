@@ -144,3 +144,117 @@ html{
     color:#fff;
 }
 /* End of Section 2 */
+
+/* Section 3 */
+.section-3{
+    background-color: #333;
+    padding: 5rem 0;
+}
+
+.gallery{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.gallery-link{
+    position:relative;
+    margin: 4rem 1rem;
+    
+}
+
+.gallery-link::before{
+    content:'';
+    position:absolute;
+    width: .2rem;
+    height: 0;
+    background-color: #fff;
+    top: 2vw;
+    left: 80%;
+    transition: height .5s;
+    z-index: 10;
+}
+
+.gallery-link:hover::before{
+    height: 80%;
+}
+
+.gallery-link::after{
+    content:'';
+    position:absolute;
+    width: 0;
+    height: .2rem;
+    background-color: #fff;
+    top: 30%;
+    left: 2rem;
+    transition: width .5s;
+}
+
+.gallery-link:hover::after{
+    width: 90%;
+}
+
+.food-name{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #fff;
+    width: 0;
+    overflow: hidden;
+    transition: width .3s;
+}
+
+.gallery-link:hover .food-name{
+    width: 100%;
+    transition: width 1.5s .5s;
+}
+
+.food-des{
+    position: absolute;
+    bottom: 3vw;
+    left: 2rem;
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    color:#fff;
+    text-transform: uppercase;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s;
+}
+
+.gallery-link:hover .food-des{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s 1s;
+}
+
+.food-img{
+    width: 26vw;
+    height: 15vw;
+    object-fit: cover;
+    box-shadow: .3rem .3rem .1rem #e92929,
+                .5rem .5rem .1rem #a2a946,
+                .7rem .7rem .1rem #297ce9,
+                .9rem .9rem .1rem #e92999;
+    transition: all 1s;
+}
+
+.gallery-link:hover .food-img{
+    box-shadow: 1rem 1rem .1rem #e92929,
+                2rem 2rem .1rem #a2a946,
+                3rem 3rem .1rem #297ce9,
+                4rem 4rem .1rem #e92999;
+    filter: blur(.5rem);
+    opacity: .5;
+    transform: scale(1.1);
+}
+
+/* End of Section 3 */
