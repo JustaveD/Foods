@@ -1,12 +1,14 @@
 /* Resources */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap');
 
-/* Common style */
+/* End of Resources */
+
+/* Common Style */
 *{
     margin:0;
     padding:0;
-    box-sizing:border-box;
-    text-decoration:none;
+    box-sizing: border-box;
+    text-decoration: none;
     outline: none;
     font-family: 'Nunito',sans-serif;
     font-weight: 400;
@@ -18,74 +20,73 @@ html{
 
 .section-heading{
     font-size: 12rem;
+    color: #fff;
+    text-transform: capitalize;
     font-weight: 900;
     letter-spacing: .5rem;
-    text-transform: capitalize;
     text-align: center;
-    text-shadow: .3rem .3rem .3rem #000;
-    color: #fff;
 }
+/* End of Common Style */
 
 /* Section 1 */
 .section-1{
     width:100%;
     height:100vh;
-    background-color: #333;
+    background-color:#333;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
+    align-items: center;
 }
 
-
-.section-1-icons i {
+.section-1-icons i{
     font-size: 35rem;
     color: #a79a2d;
     position: absolute;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.3s;
-    text-shadow: .2rem .2rem .2rem #000;
+    transform: translate(-50%,-50%) scale(0);
+    transition: transform .3s;
 }
 
 .section-1-icons i.change{
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 0.3s .3s;
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform .3s .3s;
 }
 /* End of Section 1 */
 
 /* Section 2 */
 .section-2{
-    width:100%;
-    height:100vh;
-    background-color: #222;
     display: flex;
     flex-direction: column;
-    align-items: cneter;
-    justify-content:space-between;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    width:100%;
+    height:100vh;
     padding: 10rem 0;
 }
 
 .cards-container{
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
 }
 
-.card {
+.card{
     width: 30rem;
     background-color: #a79a2d;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     padding: 3rem;
-    position: relative;
+    justify-content: space-between;
+    align-items:center;
+    position:relative;
     transform: rotateY(20deg) skewX(-2deg);
     box-shadow: 1rem 1rem 1rem #000;
     transition: transform .5s, box-shadow .5s;
 }
 
 .card:hover{
-    transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
+    transform: rotateY(20deg) skewX(-2deg) translateY(-2rem);
     box-shadow: 2rem 2rem 2rem #000;
 }
 
@@ -96,44 +97,50 @@ html{
     background-color: #817824;
     position: absolute;
     top:0;
-    left: -1rem;
+    left:-1rem;
     transform: skewY(45deg);
     transform-origin: right;
 }
+
 .card::after{
     content: '';
     width: 100%;
     height: 1rem;
-    background-color:#8f8317;
+    background-color: #8f8317;
     position: absolute;
-    top: -1rem;
-    left: 0;
+    top:-1rem;
+    left:0;
     transform: skewX(45deg);
     transform-origin: bottom;
 }
 
 .card-img{
-     width:100%;
+    width: 100%;
 }
 
 .card-name{
     font-size: 3rem;
     font-weight: 900;
     letter-spacing: .5rem;
-    margin: 2rem 0;
+    margin: 2rem 0; 
     text-transform: uppercase;
-    color: #000;
 }
 
 .card-btn{
-    border:none;
-    width:70%;
-    padding: 1rem 0;
+    width: 70%;
     font-size: 1.5rem;
-    text-transform: capitalize;
-    font-weight: 800;
-    color: #888;
     background-color: #000;
+    color: #888;
+    font-weight: 800;
+    padding: 1rem;
+    border:none;
     border-radius: 5rem;
+    box-shadow: -.1rem -.1rem -.1rem #000;
+    cursor: pointer;
+    transition: color .5s;
+    text-transform: capitalize;
+}
+.card-btn:hover{
+    color:#fff;
 }
 /* End of Section 2 */
