@@ -41,6 +41,12 @@ html{
     font-size: 35rem;
     color: #a79a2d;
     position:absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) scale(0);
     text-shadow: .2rem .2rem .2rem #000;
+    transition: transform .3s ease;
+}
+
+.section-1-icons i.change{
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform .3s .3s ease;
 }
