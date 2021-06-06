@@ -6,25 +6,23 @@
 *{
     margin:0;
     padding:0;
-    box-sizing:border-box;
+    box-sizing: border-box;
     font-family: 'Nunito',sans-serif;
+    font-weight: 400;
     text-decoration: none;
     outline:none;
-    font-weight: 400;
 }
-
 html{
     font-size: 62.5%;
 }
-
-
 .section-heading{
     font-size: 12rem;
     color: #fff;
     text-transform: capitalize;
     font-weight: 900;
     letter-spacing: .5rem;
-    text-align:center;
+    text-align: center;
+    text-shadow: .5rem .5rem .5rem #000;
 }
 /* End of Common Style */
 
@@ -32,8 +30,8 @@ html{
     /* Color  #a79a2d
     */
 .section-1{
-    width:100%;
-    height:100vh;
+    width: 100%;
+    height: 100vh;
     background-color: #333;
     display: flex;
     flex-direction: column;
@@ -45,10 +43,10 @@ html{
     font-size: 35rem;
     color: #a79a2d;
     position: absolute;
-    transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%,-50%) scale(0);
     transition: transform .3s;
+    text-shadow: .2rem .2rem .2rem #000;
 }
-
 .section-1-icons i.change{
     transform: translate(-50%,-50%) scale(1);
     transition: transform .3s .3s;
@@ -60,60 +58,54 @@ html{
               #8f8317
     */
 .section-2{
-    width:100%;
-    height:100vh;
+    width: 100%;
+    height: 100vh;
     background-color: #222;
     padding: 10rem 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
 }
 .cards-container{
     display: flex;
     justify-content: space-evenly;
-    width:100%;
 }
 .card{
-    width: 30rem;
     background-color: #a79a2d;
-    padding: 3rem;
+    width: 30rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content:space-evenly;
-    position: relative;
+    padding: 3rem;
+    align-items:center;
+    position:relative;
     transform: rotateY(20deg) skewX(-2deg);
     box-shadow: 1rem 1rem 1rem #000;
-    transition: transform 0.5s, box-shadow .5s; 
+    transition: transform .5s, box-shadow .5s;
 }
-
 .card:hover{
-    box-shadow: 2rem 2rem 2rem #000;
     transform: rotateY(20deg) skewX(-2deg) translateY(-2rem);
+    box-shadow: 2rem 2rem 2rem #000;
 }
-
 .card::before{
     content: '';
     width: 1rem;
     height: 100%;
+    background-color: #817824;
     position: absolute;
     top:0;
-    left: -1rem;
-    background-color: #817824;
-    transform: skewY(45deg);
+    left:-1rem;
+    transform:skewY(45deg);
     transform-origin: right;
 }
-
 .card::after{
     content: '';
     width: 100%;
     height: 1rem;
+    background-color: #8f8317;
     position: absolute;
     top:-1rem;
-    left: 0;
-    background-color: #8f8317;
-    transform: skewX(45deg);
+    left:0;
+    transform:skewX(45deg);
     transform-origin: bottom;
 }
 
@@ -121,25 +113,23 @@ html{
     width: 100%;
     object-fit: cover;
 }
-
 .card-name{
     font-size: 3rem;
-    font-weight: 900;
+    text-align: center;
     text-transform: uppercase;
-    text-align:center;
+    font-weight: 900;
     letter-spacing: .5rem;
     margin: 2rem 0;
 }
-
 .card-btn{
     width: 70%;
-    padding: 1rem;
-    border: none;
-    border-radius: 5rem;
     background-color: #000;
     color: #888;
-    font-weight: 800;
     font-size: 1.5rem;
+    padding: 1rem;
+    border:none;
+    border-radius: 5rem;
+    font-weight: 800;
     transition: color .5s;
     cursor: pointer;
     box-shadow: -.1rem -.1rem .1rem #000;
@@ -155,9 +145,8 @@ html{
                 #297ce9
                 #e92999 
     */
-
 .section-3{
-    width:100%;
+    width: 100%;
     height: 100vh;
     background-color: #333;
     padding: 5rem 0;
@@ -165,8 +154,8 @@ html{
 .gallery{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: space-evenly;
     margin-top: 10rem;
 }
 .gallery-link{
@@ -174,74 +163,33 @@ html{
     margin: 4rem 1rem;
 }
 .gallery-link::before{
-    content: '';
     width: .2rem;
-    height: 0%;
-    background-color: #fff;
-    position: absolute;
-    left: 80%;
+    content:'';
+    height:0%;
+    left:80%;
     top: 3rem;
+    position: absolute;
+    background-color: #fff;
     transition: height .5s;
 }
-
 .gallery-link:hover::before{
     height: 80%;
     transition: height .5s;
 }
 .gallery-link::after{
-    content: '';
     width: 0%;
-    height: .2rem;
-    background-color: #fff;
-    position: absolute;
-    left: 2rem;
+    content:'';
+    height:.2rem;
+    left:2rem;
     top: 30%;
+    position: absolute;
+    background-color: #fff;
     transition: width .5s;
 }
-
 .gallery-link:hover::after{
     width: 90%;
     transition: width .5s;
 }
-.food-name{
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
-    color: #fff;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    font-weight: 700;
-    width: 0;
-    overflow: hidden;
-    transition: width .5s;
-}
-
-.gallery-link:hover .food-name{
-    width:100%;
-    transition: 1.5s .5s;
-}
-
-.food-des{
-    position: absolute;
-    left: 2rem;
-    bottom: 3vw;
-    width: 70%;
-    font-size: 1.5rem;
-    color: #fff;
-    font-weight: 300;
-    text-transform: uppercase;
-    opacity: 0;
-    visibility: none;
-    transition: opacity .5s;
-}
-
-.gallery-link:hover .food-des{
-    opacity: 1;
-    visibility: visible;
-    transition: opacity .5s 1.2s;
-}
-
 .food-img{
     width: 26vw;
     height: 15vw;
@@ -250,9 +198,8 @@ html{
                 .5rem .5rem .1rem #a2a946,
                 .7rem .7rem .1rem #297ce9,
                 .9rem .9rem .1rem #e92999;
-    transition: all 1s;
+    transition: box-shadow .5s;
 }
-
 .gallery-link:hover .food-img{
     box-shadow: 1rem 1rem .1rem #e92929,
                 2rem 2rem .1rem #a2a946,
@@ -260,37 +207,68 @@ html{
                 4rem 4rem .1rem #e92999;
     filter: blur(.5rem);
     opacity: .5;
-    transform: scale(1.1);
-    
+    transition: box-shadow .5s , opacity .5s;
+}
+.food-name{
+    position:absolute;
+    top: 3rem;
+    left: 3rem;
+    color: #ffff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: 700;
+    width:0;
+    overflow: hidden;
+    transition: width .5s;
+}
+.gallery-link:hover .food-name{
+    width:100%;
+    transition: width 1.5s .5s;
+}
+.food-des{
+    position:absolute;
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    bottom: 3vw;
+    left: 2rem;
+    color: #fff;
+    width:70%;
+    letter-spacing: .1rem;
+    opacity: 0;
+    visibility: none;
+    transition: opacity .5s;
+}
+.gallery-link:hover .food-des{
+    opacity:1;
+    visibility: visible;
+    transition: opacity .5s 1.2s;
 }
 /* End of Section 3 */
 
 /* Section 4 */
 .section-4{
-    display: flex;
-    width: 100%;
+    width:100%;
     height: 30vh;
+    background-color: #222;
     padding: 3rem 0;
+    display: flex;
     justify-content: space-around;
     position: relative;
-    background-color: #222;
     align-items: flex-start;
-}
-.section-4-text{
-    text-transform: uppercase;
 }
 .section-4-heading{
     font-size: 4rem;
     color: #a79a2d;
+    text-transform: uppercase;
     font-weight: 900;
-    /* letter-spacing: .1rem; */
+    /* letter-spacing: .2rem; */
 }
-
 .section-4-paragraph{
-    color:#888;
     font-size: 1.5rem;
-    /* letter-spacing: .1rem;
-    font-weight: 200; */
+    color: #888;
+    text-transform: uppercase;
 }
 .section-4-form{
     display:flex;
@@ -301,36 +279,33 @@ html{
     height: 5rem;
     color: #a79a2d;
     font-size: 1.8rem;
-    font-weight: 700;
     padding: 1rem;
-    border: none;
+    border:none;
+}
+.section-4-form-input::placeholder{
+    font-size: 1.8rem;
+    color: #a79a2d;
+    font-weight: 700;
 }
 .section-4-form-btn{
     width: 4rem;
     height: 4rem;
     position: relative;
-    right: 4.5rem;
+    left: -4.5rem;
     background-color: #333;
     color: #a79a2d;
-    cursor: pointer;
     font-size: 1.8rem;
-    border:none;
 }
-.section-4-form-input::placeholder{
-    color: #a79a2d;
-    font-size: 1.6rem;
-    letter-spacing: .1rem;
-}
-.section-4-copyrights{
+.copyrights{
     position: absolute;
     bottom: 3rem;
+    font-size:1.7rem;
     color: #eee;
-    font-size: 1.7rem;
-    border-top: .1rem solid #888;
-    padding-top: 6rem;
-    width: 100%;
-    text-align: center;
-    letter-spacing: .1rem;
     font-weight: 200;
+    letter-spacing: .1rem;
+    padding-top:6rem;
+    border-top: .1rem solid #888;
+    width:100%;
+    text-align: center;
 }
 /* End of Section 4 */
